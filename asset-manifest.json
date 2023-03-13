@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/corse-countries-ts-react-redux/static/css/main.e937bdad.css",
+    "main.js": "/corse-countries-ts-react-redux/static/js/main.8c77621e.js",
+    "index.html": "/corse-countries-ts-react-redux/index.html",
+    "main.e937bdad.css.map": "/corse-countries-ts-react-redux/static/css/main.e937bdad.css.map",
+    "main.8c77621e.js.map": "/corse-countries-ts-react-redux/static/js/main.8c77621e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e937bdad.css",
+    "static/js/main.8c77621e.js"
+  ]
+}
