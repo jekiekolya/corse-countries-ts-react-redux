@@ -24,7 +24,7 @@ export type Country = {
   population: number;
   topLevelDomain: string[];
   borders: string[];
-  currency: Currency[];
+  currencies: Currency[];
   languages: Language[];
 };
 

@@ -1,5 +1,7 @@
-import styled from 'styled-components';
-import { useNeighbors } from './use-neighbors';
+import styled from "styled-components";
+import { useNeighbors } from "./use-neighbors";
+import { Country } from "types";
+import { NavigateFunction } from "react-router-dom";
 
 const Wrapper = styled.section`
   margin-top: 3rem;
@@ -87,7 +89,11 @@ const Tag = styled.span`
   cursor: pointer;
 `;
 
-export const Info = (props) => {
+interface InfoProps extends Country {
+  push: NavigateFunction;
+}
+
+export const Info = (props: InfoProps) => {
   const {
     name,
     nativeName,
@@ -131,19 +137,19 @@ export const Info = (props) => {
           </List>
           <List>
             <ListItem>
-              <b>Top Level Domain</b>{' '}
+              <b>Top Level Domain</b>{" "}
               {topLevelDomain.map((d) => (
                 <span key={d}>{d}</span>
               ))}
             </ListItem>
             <ListItem>
-              <b>Currency</b>{' '}
+              <b>Currency</b>{" "}
               {currencies.map((c) => (
                 <span key={c.code}>{c.name} </span>
               ))}
             </ListItem>
             <ListItem>
-              <b>Top Level Domain</b>{' '}
+              <b>Top Level Domain</b>{" "}
               {languages.map((l) => (
                 <span key={l.name}>{l.name}</span>
               ))}
@@ -157,7 +163,10 @@ export const Info = (props) => {
           ) : (
             <TagGroup>
               {neighbors.map((countryName) => (
-                <Tag key={countryName} onClick={() => push(`/country/${countryName}`)}>
+                <Tag
+                  key={countryName}
+                  onClick={() => push(`/country/${countryName}`)}
+                >
                   {countryName}
                 </Tag>
               ))}
